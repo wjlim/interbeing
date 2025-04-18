@@ -1,11 +1,16 @@
 ---
+description: 
+globs: 
+alwaysApply: true
+---
+---
 description: You are an expert in AWS amplify with TypeScript, Next.js, App Router, React, Figma, Flutter, Swift.  # AWS Amplify Full-Stack Development Project  This is a full-stack development project using AWS Amplify for both web (Next.js) and mobile (Swift) applications. All responses should be provided in English.  ## Web Development (Next.js App Router)  ### Project Structure  - `app/` - Next.js application files   - `page.tsx` - Main application page with Todo functionality   - `layout.tsx` - Root layout component   - `globals.css` - Global styles  - `amplify/` - AWS Amplify configuration   - `auth/resource.ts` - Authentication configuration using Cognito   - `data/resource.ts` - Data model and API configuration using AppSync/DynamoDB   - `backend.ts` - Backend definition combining auth and data resources  ### Key Features  - **Authentication**: Setup with Amazon Cognito for secure user authentication - **API**: GraphQL API powered by AWS AppSync - **Database**: DynamoDB for data storage - **Real-time Updates**: Subscription-based real-time updates for data changes  ### Development Workflow  1. Define data models in `amplify/data/resource.ts` 2. Configure authentication in `amplify/auth/resource.ts` 3. Use the generated client in frontend components to interact with the backend 4. Deploy to AWS using Amplify CLI or AWS Amplify Console  ### Common Patterns  - Data client generation: `const client = generateClient<Schema>();` - Creating records: `client.models.ModelName.create({...})` - Querying records: `client.models.ModelName.list()` - Real-time updates: `client.models.ModelName.observeQuery().subscribe({...})`  ## Swift App Development  ### Project Structure  - `ios/` - Swift application files   - `Models/` - Swift data models   - `Views/` - SwiftUI views   - `ViewModels/` - View models for SwiftUI   - `Services/` - API and authentication services  ### Key Features  - **SwiftUI**: Modern declarative UI framework - **Combine**: Reactive programming with Swift - **AWS Amplify iOS SDK**: Integration with AWS services - **Authentication**: User authentication with Cognito - **API**: GraphQL and REST API integration  ### Development Workflow  1. Set up Amplify in Swift project using the Amplify CLI 2. Configure authentication and API services 3. Create SwiftUI views and connect to backend services 4. Implement real-time updates using Amplify subscriptions  ### Common Patterns  - Amplify configuration: `Amplify.configure()` - Authentication: `Amplify.Auth.signIn(username:, password:)` - API queries: `Amplify.API.query(request: .get(modelType:))` - Real-time subscriptions: `Amplify.API.subscribe(request: .subscription(of:))`  ## Code Style and Structure  - Write concise, technical TypeScript/Swift code with accurate examples - Use functional and declarative programming patterns; avoid classes when possible - Prefer iteration and modularization over code duplication - Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError) - Structure files: exported component, subcomponents, helpers, static content, types
-globs: "**/*.ts", "**/*.tsx", "**/*.swift"
-alwaysApply: false
+globs: "**/*.ts", "**/*.tsx", "**/*.swift", "**/*.json", "**/*.html", "**/*.css"
+
 ---
 
 ## Useful Resources
-
+- [react-rules.mdc](mdc:.cursor/rules/react-rules.mdc)
 - [AWS Amplify Documentation](mdc:https:/docs.amplify.aws)
 - [Next.js Documentation](mdc:https:/nextjs.org/docs)
 - [AWS Amplify Gen 2 Documentation](mdc:https:/docift/stUI Documentation](https:/developer.apple.com/documentation/swiftui)
